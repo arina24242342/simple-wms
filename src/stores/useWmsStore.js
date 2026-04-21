@@ -291,23 +291,6 @@ export const useWmsStore = () => {
     }
   }
 
-  function resetDemoData() {
-    if (!window.confirm('Удалить данные из localStorage и заново загрузить демо-данные?')) {
-      return;
-    }
-
-    Object.values(STORAGE_KEYS).forEach((key) => localStorage.removeItem(key));
-    state.searchQuery = '';
-    state.activeTab = 'dashboard';
-    state.isModalOpen = false;
-    state.newCategoryName = '';
-    state.newCell = defaultCellForm();
-    state.productForm = defaultProductForm();
-    state.categories = structuredClone(demoState.categories);
-    state.cells = structuredClone(demoState.cells);
-    state.products = structuredClone(demoState.products);
-  }
-
   storeInstance = {
     state,
     tabTitle,
@@ -329,7 +312,6 @@ export const useWmsStore = () => {
     deleteCategory,
     addCell,
     deleteCell,
-    resetDemoData,
   };
 
   return storeInstance;

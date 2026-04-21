@@ -1,6 +1,5 @@
 <script setup>
 import {
-  PhArrowClockwise,
   PhDatabase,
   PhMagnifyingGlass,
 } from '@phosphor-icons/vue';
@@ -24,7 +23,7 @@ defineProps({
   },
 });
 
-const emit = defineEmits(['update:searchQuery', 'reset']);
+const emit = defineEmits(['update:searchQuery']);
 </script>
 
 <template>
@@ -60,15 +59,6 @@ const emit = defineEmits(['update:searchQuery', 'reset']);
             @input="emit('update:searchQuery', $event.target.value)"
           />
         </label>
-
-        <button
-          type="button"
-          class="flex items-center justify-center gap-2 rounded-2xl bg-[color:var(--color-ink)] px-4 py-3 font-medium text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[color:var(--color-accent)]"
-          @click="emit('reset')"
-        >
-          <PhArrowClockwise :size="18" />
-          Сбросить демо-данные
-        </button>
       </div>
     </div>
 

@@ -101,7 +101,6 @@ const viewEvents = computed(() => {
           :search-query="store.state.searchQuery"
           :active-tab="store.state.activeTab"
           @update:search-query="store.state.searchQuery = $event"
-          @reset="store.resetDemoData"
         />
 
         <transition name="fade-slide" mode="out-in">
