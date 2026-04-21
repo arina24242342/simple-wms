@@ -1,0 +1,33 @@
+{
+  "name": "simple-wms",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Browser-based warehouse management system built with Vue 3 and Vite.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arina24242342/simple-wms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/arina24242342/simple-wms/issues"
+  },
+  "homepage": "https://github.com/arina24242342/simple-wms#readme",
+  "dependencies": {
+    "@phosphor-icons/vue": "^2.2.1",
+    "vue": "^3.5.32"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "tailwindcss": "^4.2.4",
+    "vite": "^8.0.9"
+  }
+}
