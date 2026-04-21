@@ -5,7 +5,7 @@ import {
   PhGridFour,
   PhPackage,
   PhShapes,
-} from '@phosphor-icons/vue';
+} from "@phosphor-icons/vue";
 
 defineProps({
   activeTab: {
@@ -14,13 +14,13 @@ defineProps({
   },
 });
 
-const emit = defineEmits(['navigate']);
+const emit = defineEmits(["navigate"]);
 
 const items = [
-  { id: 'dashboard', label: 'Дашборд', icon: PhChartPieSlice },
-  { id: 'products', label: 'Товары', icon: PhPackage },
-  { id: 'cells', label: 'Ячейки', icon: PhGridFour },
-  { id: 'categories', label: 'Категории', icon: PhShapes },
+  { id: "dashboard", label: "Дашборд", icon: PhChartPieSlice },
+  { id: "products", label: "Товары", icon: PhPackage },
+  { id: "cells", label: "Ячейки", icon: PhGridFour },
+  { id: "categories", label: "Категории", icon: PhShapes },
 ];
 </script>
 
@@ -29,7 +29,9 @@ const items = [
     class="glass-panel pattern-grid relative overflow-hidden rounded-[28px] p-5 text-white md:min-h-[calc(100vh-2rem)] md:w-64 md:p-6"
     style="background-color: rgba(19, 34, 38, 0.92)"
   >
-    <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-teal-400/20 via-amber-300/10 to-transparent"></div>
+    <div
+      class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-teal-400/20 via-amber-300/10 to-transparent"
+    ></div>
     <div class="relative flex h-full flex-col gap-6">
       <div>
         <div class="flex items-center gap-3">
@@ -37,13 +39,12 @@ const items = [
             <PhArchiveBox :size="28" weight="duotone" />
           </div>
           <div>
-            <p class="text-xs uppercase tracking-[0.35em] text-white/55">simple</p>
-            <h1 class="text-2xl font-semibold">WMS</h1>
+            <p class="text-xs uppercase tracking-[0.35em] text-white/55">
+              simple
+            </p>
+            <h1 class="text-xl font-semibold">WMS</h1>
           </div>
         </div>
-        <p class="mt-4 max-w-xs text-sm leading-6 text-white/65">
-          Учебная система управления складом, работающая полностью в браузере.
-        </p>
       </div>
 
       <nav class="grid gap-2">
