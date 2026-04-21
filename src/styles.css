@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --color-ink: #132226;
+  --color-ink-soft: #375258;
+  --color-panel: rgba(255, 252, 245, 0.9);
+  --color-panel-strong: rgba(255, 252, 245, 0.98);
+  --color-line: rgba(19, 34, 38, 0.1);
+  --color-accent: #167c80;
+  --color-accent-soft: #d8f1f2;
+  --color-highlight: #f59f00;
+  --color-success: #2b8a3e;
+  --color-danger: #c92a2a;
+  --shadow-soft: 0 18px 40px rgba(19, 34, 38, 0.12);
+  --shadow-card: 0 10px 24px rgba(19, 34, 38, 0.08);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(245, 159, 0, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(22, 124, 128, 0.16), transparent 32%),
+    linear-gradient(180deg, #f7f2e7 0%, #edf6f6 100%);
+  color: var(--color-ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.glass-panel {
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+.soft-card {
+  background: var(--color-panel-strong);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-card);
+}
+
+.pattern-grid {
+  background-image:
+    linear-gradient(rgba(19, 34, 38, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(19, 34, 38, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+
+.stagger-in {
+  animation: stagger-in 0.5s ease both;
+}
+
+@keyframes stagger-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
