@@ -1,13 +1,13 @@
 <script setup>
-import { computed } from 'vue';
-import AppHeader from './components/AppHeader.vue';
-import AppSidebar from './components/AppSidebar.vue';
-import CategoriesView from './components/CategoriesView.vue';
-import CellsView from './components/CellsView.vue';
-import DashboardView from './components/DashboardView.vue';
-import ProductModal from './components/ProductModal.vue';
-import ProductsView from './components/ProductsView.vue';
-import { useWmsStore } from './stores/useWmsStore';
+import { computed } from "vue";
+import AppHeader from "./components/AppHeader.vue";
+import AppSidebar from "./components/AppSidebar.vue";
+import CategoriesView from "./components/CategoriesView.vue";
+import CellsView from "./components/CellsView.vue";
+import DashboardView from "./components/DashboardView.vue";
+import ProductModal from "./components/ProductModal.vue";
+import ProductsView from "./components/ProductsView.vue";
+import { useWmsStore } from "./stores/useWmsStore";
 
 const store = useWmsStore();
 
@@ -24,20 +24,20 @@ const currentView = computed(() => {
 
 const viewProps = computed(() => {
   switch (store.state.activeTab) {
-    case 'products':
+    case "products":
       return {
         products: store.filteredProducts.value,
         getCategoryName: store.getCategoryName,
         getCellName: store.getCellName,
         getProductImage: store.getProductImage,
       };
-    case 'cells':
+    case "cells":
       return {
         cells: store.cellsWithStatus.value,
         freeCellsCount: store.freeCellsCount.value,
         form: store.state.newCell,
       };
-    case 'categories':
+    case "categories":
       return {
         categories: store.state.categories,
         distribution: store.categoryDistribution.value,
@@ -62,19 +62,19 @@ const viewProps = computed(() => {
 
 const viewEvents = computed(() => {
   switch (store.state.activeTab) {
-    case 'products':
+    case "products":
       return {
         create: store.openProductModal,
         delete: store.deleteProduct,
       };
-    case 'cells':
+    case "cells":
       return {
         submit: store.addCell,
         delete: store.deleteCell,
       };
-    case 'categories':
+    case "categories":
       return {
-        'update:newCategoryName': (value) => {
+        "update:newCategoryName": (value) => {
           store.state.newCategoryName = value;
         },
         submit: store.addCategory,
