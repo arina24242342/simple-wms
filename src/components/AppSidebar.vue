@@ -63,14 +63,6 @@ const items = [
           <span class="font-medium">{{ item.label }}</span>
         </button>
       </nav>
-
-      <div class="mt-auto rounded-3xl bg-white/10 p-4 ring-1 ring-white/10">
-        <p class="text-xs uppercase tracking-[0.3em] text-white/50">режим</p>
-        <p class="mt-2 text-lg font-semibold">LocalStorage Demo</p>
-        <p class="mt-2 text-sm leading-6 text-white/65">
-          Без сервера, без базы данных и без перезагрузки страницы.
-        </p>
-      </div>
     </div>
   </aside>
 </template>
